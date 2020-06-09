@@ -1,0 +1,275 @@
+PARALLEL WORKING
+
+pipeline 
+{
+	agent any
+	tools 
+		{ 
+	        maven 'M2_HOME' 
+	        jdk 'JAVA_HOME' 
+	    }
+		options 
+		{
+			timestamps()
+		}
+	stages
+	{	
+		stage('Initialize Code')
+		{
+			steps
+			{
+				parallel(
+				First: {
+				git "https://github.com/my-IT/QA-Jenkins.git"
+				sh 'mvn test'
+				},
+				Second: {
+				sh 'mvn test'
+				step([$class : 'Publisher', reportFilenamePattern : "**/testng-results.xml"])
+				}
+				)
+				
+			}
+		}
+	}	
+}
+
+
+SIMPLE WORKING
+
+
+pipeline 
+{
+		agent any
+		tools 
+		{ 
+	        maven 'M2_HOME' 
+	        jdk 'JAVA_HOME' 
+	    }
+		options 
+		{
+			timestamps()
+		}
+	stages
+	{	
+		stage('Initialize Code')
+		{
+			steps
+			{
+				git "https://github.com/my-IT/QA-Jenkins.git"
+				script
+				{
+                        sh 'mvn test'
+				}
+				step([$class : 'Publisher', reportFilenamePattern : "**/testng-results.xml"])
+			}
+		}
+	}	
+}
+
+
+Maven with parameters
+
+pipeline 
+{
+	agent any
+	tools 
+		{ 
+	        maven 'M2_HOME' 
+	        jdk 'JAVA_HOME' 
+	    }
+		options 
+		{
+			timestamps()
+		}
+	stages
+	{	
+		stage('Parallel Testing')
+		{
+			steps
+			{
+				parallel(
+				First: {
+				sh 'echo "First block"'
+				git "https://github.com/my-IT/QA-Jenkins.git"
+				sh 'mvn test -DfileName="testNGprofessionalServices.xml"'
+				},
+				Second: {
+				sh 'echo "Second block"'
+				sh 'mvn test -DfileName="testNGproductsAndServices.xml"'
+				step([$class : 'Publisher', reportFilenamePattern : "**/testng-results.xml"])
+				}
+				)
+				
+			}
+		}
+	}	
+}
+
+Maven with parameters and parallel tab view
+pipeline 
+{
+	agent any
+	tools 
+		{ 
+	        maven 'M2_HOME' 
+	        jdk 'JAVA_HOME' 
+	    }
+		options 
+		{
+			timestamps()
+		}
+	stages
+	{	
+		stage('Parallel Testing')
+		{
+				parallel
+				{
+					stage("Professional Services")
+					{
+					  steps
+					  {
+						sh 'echo "First block"'
+						git "https://github.com/my-IT/QA-Jenkins.git"
+						sh 'mvn test -DfileName="testNGprofessionalServices.xml"'
+						step([$class : 'Publisher', reportFilenamePattern : "**/testng-results.xml"])
+					  }
+					}
+					stage("Products and Services") 
+					{
+					  steps
+					  {
+						sh 'echo "Second block"'
+						sh 'mvn test -DfileName="testNGproductsAndServices.xml"'
+						step([$class : 'Publisher', reportFilenamePattern : "**/testng-results.xml"])
+					  }
+					}
+				}
+		}
+	}	
+}
+
+
+
+
+pipeline 
+{
+	agent any
+	tools 
+		{ 
+	        maven 'M2_HOME' 
+	        jdk 'JAVA_HOME' 
+	    }
+		options 
+		{
+			timestamps()
+		}
+	stages
+	{	
+	    stage("Initializing Environment")
+	    {
+		 parallel
+				{
+					stage("Git Fetch")
+					{
+					  steps
+					  {
+						git "https://github.com/my-IT/QA-Jenkins.git"
+					  }
+					}
+					stage("Run Products and Services") 
+					{
+					  steps
+					  {
+						sh 'mvn test -DfileName="testNGproductsAndServices.xml"'
+					  }
+					}
+					stage("Run Professional Services") 
+					{
+					    steps
+					    {
+					    sh 'mvn test -DfileName="testNGprofessionalServices.xml"'
+					    step([$class : 'Publisher', reportFilenamePattern : "**/testng-results.xml"])
+					    }
+					 }
+					    
+				}
+		}		
+	}	
+}
+
+
+
+// WORKING BLUEOCEAN SCRIPT
+
+
+pipeline {
+  agent any
+  stages {
+    stage('Initialising Environment') {
+      parallel {
+        stage('Git Fetch') {
+          steps {
+            git 'https://github.com/my-IT/QA-Jenkins.git'
+          }
+        }
+
+        stage('Initialise Tools') {
+          steps {
+            tool(name: 'M2_HOME', type: 'maven')
+            tool(name: 'JAVA_HOME', type: 'jdk')
+          }
+        }
+
+      }
+    }
+
+    stage('Execute Tests') {
+      parallel {
+        stage('Execute Tests') {
+          steps {
+            echo 'Start Execution'
+          }
+        }
+
+        stage('Run Products and Services') {
+          steps {
+            sh 'mvn test -DfileName="testNGproductsAndServices.xml"'
+          }
+        }
+
+        stage('Run Professional Services') {
+          steps {
+            sh 'mvn test -DfileName="testNGprofessionalServices.xml"'
+          }
+        }
+
+      }
+    }
+
+    stage('Close Tests') {
+      parallel {
+        stage('Close Tests') {
+          steps {
+            echo 'Execution Completed'
+          }
+        }
+
+        stage('TestNG Report') {
+          steps {
+            script {
+              junit 'target/surefire-reports/junitreports/*.xml'
+            }
+
+          }
+        }
+
+      }
+    }
+
+  }
+  tools {
+    maven 'M2_HOME'
+    jdk 'JAVA_HOME'
+  }
+}

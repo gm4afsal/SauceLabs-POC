@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [LeadToQuote- DEV REGRESSION]" guice-stage="DEVELOPMENT">
+  <parameter name="baseUrl" value="https://www.google.com"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="seleniumUrl" value="localhost"/>
+  <test thread-count="5" name="LeadConversion(failed)">
+    <classes>
+      <class name="com.my.excel.sauceLabs1">
+        <methods>
+          <include name="openGmail"/>
+          <include name="timeCalculator"/>
+          <include name="onTestSetup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.my.excel.sauceLabs1 -->
+    </classes>
+  </test> <!-- LeadConversion(failed) -->
+</suite> <!-- Failed suite [LeadToQuote- DEV REGRESSION] -->

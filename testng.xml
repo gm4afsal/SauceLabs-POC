@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="LeadToQuote- DEV REGRESSION">
+  <parameter name="baseUrl" value="https://www.google.com"/>
+    <parameter name="browser" value="chrome"/>
+  <parameter name="seleniumUrl" value="localhost"/>
+
+ <test name="LeadConversion">
+    <classes>
+     
+    <class name="com.my.saucelabs.sauceLabs1">
+     </class> 
+
+     
+    </classes>
+  </test> 
+</suite>
+
+

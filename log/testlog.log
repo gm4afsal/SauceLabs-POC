@@ -1,0 +1,18 @@
+2020-06-09 19:36:30,581 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as /Users/abacker/.m2/repository/webdriver/chromedriver/mac64/79.0.3945.36/chromedriver
+2020-06-09 19:39:41,583 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as /Users/abacker/.m2/repository/webdriver/chromedriver/mac64/79.0.3945.36/chromedriver
+2020-06-09 19:40:22,234 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as /Users/abacker/.m2/repository/webdriver/chromedriver/mac64/79.0.3945.36/chromedriver
+2020-06-09 19:40:26,082 - com.my.base.Base -INFO - Open Gmail.
+2020-06-09 19:40:28,101 - com.my.base.Base -INFO - Gmail opened.
+2020-06-09 19:40:28,106 - com.my.base.Base -INFO - TEST EXECUTION TIME:  0 Minutes
+2020-06-09 19:43:37,778 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as /Users/abacker/.m2/repository/webdriver/chromedriver/mac64/79.0.3945.36/chromedriver
+2020-06-09 19:43:41,973 - com.my.base.Base -INFO - Open Gmail.
+2020-06-09 19:43:46,999 - com.my.base.Base -INFO - Gmail opened.
+2020-06-09 19:43:47,004 - com.my.base.Base -INFO - TEST EXECUTION TIME:  0 Minutes
+2020-06-09 19:45:00,501 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as /Users/abacker/.m2/repository/webdriver/chromedriver/mac64/79.0.3945.36/chromedriver
+2020-06-09 19:45:04,224 - com.my.base.Base -INFO - Open Gmail.
+2020-06-09 19:45:09,248 - com.my.base.Base -INFO - Gmail opened.
+2020-06-09 19:45:09,252 - com.my.base.Base -INFO - TEST EXECUTION TIME:  0 Minutes
+2020-06-09 19:45:35,578 - io.github.bonigarcia.wdm.WebDriverManager -INFO - Exporting webdriver.chrome.driver as /Users/abacker/.m2/repository/webdriver/chromedriver/mac64/79.0.3945.36/chromedriver
+2020-06-09 19:45:39,490 - com.my.base.Base -INFO - Open Gmail.
+2020-06-09 19:45:53,988 - com.my.base.Base -INFO - Gmail opened.
+2020-06-09 19:45:53,992 - com.my.base.Base -INFO - TEST EXECUTION TIME:  0 Minutes

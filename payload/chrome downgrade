@@ -1,0 +1,9 @@
+https://www.slimjet.com/chrome/google-chrome-old-version.php
+
+Uninstall current chrome
+Install 79 from link
+	0.	Enter the following command in terminal and hit Enter:
+defaults write com.google.keystone.agent checkinterval 0
+	0.	Exit out of Terminal 
+	0.	Restart Google Chrome
+To check version go to url : chrome://version/ 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Guest Suite" parallel="false">
+  <parameter name="baseUrl" value="${baseUrl}" />
+  <parameter name="seleniumUrl" value="${seleniumUrl}" />
+  <parameter name="browser" value="${browser}" />
+  
+  <test name="Lead Regression">
+  <classes>
+     
+      <class name="com.my.lead.createLeadTest"/>
+    
+  </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+

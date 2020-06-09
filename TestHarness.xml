@@ -1,0 +1,14 @@
+<?xmlversion="1.0"encoding="UTF-8"?>
+<!DOCTYPEsuite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suitename="Iteration_5_Suite"parallel="instances"thread-count="5">
+       <parametername="browserUnderTest"value="ie"/>
+       <parametername="environment"value="bashful"/>
+       <parametername="runLocation"value="remote"/>
+       <parametername="url"value="http://"/>
+       <parametername="screenshotPath"value="C:\\Screenshots\\"/>
+       <testname="Iteration_5">
+              <classes>
+                    
+              </classes>
+       </test>
+</suite>

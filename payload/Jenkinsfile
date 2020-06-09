@@ -1,0 +1,70 @@
+pipeline {
+  agent any
+  stages {
+    stage('Initialising Environment') {
+      parallel {
+        stage('Git Fetch') {
+          steps {
+            git 'https://github.com/my-IT/QA-Jenkins.git'
+          }
+        }
+
+        stage('Initialise Tools') {
+          steps {
+            tool(name: 'M2_HOME', type: 'maven')
+            tool(name: 'JAVA_HOME', type: 'jdk')
+          }
+        }
+
+      }
+    }
+
+    stage('Execute Tests') {
+      parallel {
+        stage('Execute Tests') {
+          steps {
+            echo 'Start Execution'
+          }
+        }
+
+        stage('Run Products and Services') {
+          steps {
+            sh 'mvn test -DfileName="testNGproductsAndServices.xml"'
+          }
+        }
+
+        stage('Run Professional Services') {
+          steps {
+            sh 'mvn test -DfileName="testNGprofessionalServices.xml"'
+          }
+        }
+
+      }
+    }
+
+    stage('Close Tests') {
+      parallel {
+        stage('Close Tests') {
+          steps {
+            echo 'Execution Completed'
+          }
+        }
+
+        stage('TestNG Report') {
+          steps {
+            script {
+              junit 'target/surefire-reports/junitreports/*.xml'
+            }
+
+          }
+        }
+
+      }
+    }
+
+  }
+  tools {
+    maven 'M2_HOME'
+    jdk 'JAVA_HOME'
+  }
+}

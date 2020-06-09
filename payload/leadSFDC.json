@@ -1,0 +1,70 @@
+{
+   "records":[
+   {
+   		"FirstName": "Account Rest",
+    	"LastName":"rest",
+    	"Company":"Rest API",
+    	"Domain":"@my.com",
+    	"city": "California",
+    	"country": "United States",
+    	"Title":"Title test",
+    	"Phone":"9876543210",
+    	"countryCode":"US",
+    	"postalCode":"56895",
+    	"state":"California",
+    	"stateCode":"CA",
+    	"street":"123 Boulevard1104124052",
+		"Value_Adds__c":"Secure meeting(s) with key decision maker(s);Establish account mapping;Assist with Account Plan",
+    	"Partner_Portal_Request__c":"true",
+    	"Federal_Influenced__c":"false",
+    	"Rule_Number":"1"
+   }
+   
+  ],
+  "QueueOwner":{
+  		"1":"Lead Queue Channel Operations",
+  		"3":"Lead Queue-AMS Channel Partners",
+  		"4":"William Cahillane",
+  		"5":"William Cahillane",
+  		"6":"Greg Wanberg",
+  		"7":"Greg Wanberg",
+  		"8":"Martin Van Son",
+  		"9":"Bart De Vos",
+  		"10":"Florian Pereira",
+  		"11":"Florian Pereira",
+  		"12":"Alexander Ivanov",
+  		"13":"Adriano Lino",
+  		"14":"Dan Northcraft",
+  		"15":"Ron Mauldin",
+  		"16":"Ron Mauldin",
+  		"17":"Greg Wanberg",
+  		"18":"Ron Mauldin",
+  		"19":"Rylen Dunn",
+  		"20":"Blake Stagner",
+  		"21":"Greg Wanberg",
+  		"22":"Brian Ely",
+  		"23":"Brian Ely",
+  		"24":"Chris Manthou",
+  		"25":"Ross Aanenson",
+  		"26":"Daisy Sarne",
+  		"27":"Travis Hunt",
+  		"28":"Lead Queue BDR EMEA WEUR",
+  		"29":"Rafal Szewczyk",
+  		"30":"Alexander Ivanov",
+  		"31":"Alexander Ivanov",
+  		"32":"Lead Queue BDR EMEA MEA",
+  		"33":"Lead Queue BDR EMEA NEUR",
+  		"34":"Alexander Ivanov",
+  		"35":"Syahir Roslan",
+  		"36":"Syahir Roslan",
+  		"37":"Damien Kong",
+  		"38":"Janet Warabino",
+  		"39":"Hunju Lee",
+  		"40":"Navenya Ragu"
+  	  
+  }
+  
+
+}
+
+

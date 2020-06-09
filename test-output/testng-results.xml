@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-06-09T19:45:35 IST" name="LeadToQuote- DEV REGRESSION" finished-at="2020-06-09T19:45:54 IST" duration-ms="18718">
+    <groups>
+    </groups>
+    <test started-at="2020-06-09T19:45:35 IST" name="LeadConversion" finished-at="2020-06-09T19:45:54 IST" duration-ms="18718">
+      <class name="com.my.saucelabs.sauceLabs1">
+        <test-method is-config="true" signature="onTestSetup(java.lang.String, java.lang.String, java.lang.String, org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.my.saucelabs.sauceLabs1@36902638]" started-at="2020-06-09T19:45:35 IST" name="onTestSetup" finished-at="2020-06-09T19:45:39 IST" duration-ms="4137" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.google.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[localhost]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[org.testng.TestRunner@3e792ce3]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[public void com.my.saucelabs.sauceLabs1.openGmail() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onTestSetup -->
+        <test-method signature="openGmail()[pri:0, instance:com.my.saucelabs.sauceLabs1@36902638]" started-at="2020-06-09T19:45:39 IST" name="openGmail" finished-at="2020-06-09T19:45:53 IST" duration-ms="14503" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openGmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.my.saucelabs.sauceLabs1@36902638]" started-at="2020-06-09T19:45:53 IST" name="tearDown" finished-at="2020-06-09T19:45:54 IST" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="timeCalculator()[pri:0, instance:com.my.saucelabs.sauceLabs1@36902638]" started-at="2020-06-09T19:45:53 IST" name="timeCalculator" finished-at="2020-06-09T19:45:53 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- timeCalculator -->
+      </class> <!-- com.my.saucelabs.sauceLabs1 -->
+    </test> <!-- LeadConversion -->
+  </suite> <!-- LeadToQuote- DEV REGRESSION -->
+</testng-results>
